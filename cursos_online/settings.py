@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rj&=d)yn#6%ri-iotfgy!qbdisri!@mrdnpr!4cvv#@hglsa)f
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.render.com']
+ALLOWED_HOSTS = ['courses-online-h1f0.onrender.com']
 
 
 # Application definition

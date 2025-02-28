@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-rj&=d)yn#6%ri-iotfgy!qbdisri!@mrdnpr!4cvv#@hglsa)f
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['courses-online-h1f0.onrender.com']
+ALLOWED_HOSTS = ['courses-online-h1f0.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -118,14 +118,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = [
-    BASE_DIR / "cursos/static",  # Directorio de archivos estáticos
+    os.path.join(BASE_DIR, 'static')
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

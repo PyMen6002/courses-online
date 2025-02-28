@@ -1,0 +1,15 @@
+<!-- cursos/templates/cursos/detalle_curso.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ curso.nombre }}</title>
+</head>
+<body>
+    <h1>{{ curso.nombre }}</h1>
+    <p>{{ curso.descripcion }}</p>
+    <p>Fecha de inicio: {{ curso.fecha_inicio }}</p>
+    <p>Duración: {{ curso.duracion }} horas</p>
+    <a href="{% url 'lista_cursos' %}">Volver a la lista</a>
+</body>
+</html>

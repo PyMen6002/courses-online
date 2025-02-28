@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cursos</title>
+    <!-- Carga del archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a la lista de Cursos</h1>
+    </header>
+
+    <div class="curso-lista">
+        {% for curso in cursos %}
+        <div class="curso-card">
+            <h2 class="curso-titulo">{{ curso.nombre }}</h2>
+            <p class="curso-descripcion">{{ curso.descripcion }}</p>
+            <!-- Botón para redirigir a YouTube -->
+            <a href="{{ curso.url_youtube }}" class="btn-youtube" target="_blank">Ver en YouTube</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

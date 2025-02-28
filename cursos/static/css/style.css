@@ -1,0 +1,121 @@
+/* Fondo degradado para toda la página */
+body {
+    background: linear-gradient(to right, #f06, #ff9a8b); /* Fondo degradado de rosa a naranja */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Estilo de la lista de cursos */
+.curso-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño responsivo */
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+}
+
+/* Estilo de cada card de curso */
+.curso-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animación de entrada */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efecto de hover en las cards */
+.curso-card:hover {
+    transform: scale(1.05); /* Efecto de aumentar tamaño cuando se pasa el mouse */
+}
+
+/* Título del curso */
+.curso-titulo {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Descripción del curso */
+.curso-descripcion {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Botón de YouTube */
+.btn-youtube {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FF0000; /* Rojo de YouTube */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+.btn-youtube:hover {
+    background-color: #cc0000; /* Rojo más oscuro cuando se pasa el ratón */
+    transform: scale(1.1); /* Hace que el botón crezca ligeramente */
+}
+
+/* Estilo de los enlaces (como el de YouTube) */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Estilo de los cursos cargados */
+.curso-card.loaded {
+    opacity: 1;
+}
+
+/* Agregar una animación a la carga de la página */
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeInBody 1s ease-in-out;
+}
